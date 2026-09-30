@@ -1,6 +1,3 @@
-# Programa de contraseña segura
-
-Generador y verificador de contraseñas. HTML + CSS + JavaScript puro.
 
 ## Abrir en VS Code
 1. `Archivo > Abrir carpeta...` y elige esta carpeta.
