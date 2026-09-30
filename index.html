@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contraseña Segura</title>
+<link rel="stylesheet" href="style.css"></head>
+<body><main>
+<h1>contraseña_segura<span class="cur">_</span></h1>
+<p class="sub">// Genera y verifica contraseñas seguras .</p>
+
+<section class="card">
+<h2>Generador</h2>
+<div class="row">
+<label><input type="radio" name="modo" value="pw" checked> Contraseña aleatoria</label>
+<label><input type="radio" name="modo" value="frase"> Frase secreta</label>
+</div>
+<div class="out"><input type="text" id="salida" readonly aria-label="Contraseña generada"><button id="copiar">Copiar</button></div>
+<div class="row" id="opsPw">
+<label>Longitud: <b id="lenV">16</b> <input type="range" id="len" min="12" max="64" value="16"></label>
+<label><input type="checkbox" id="cMin" checked> a-z</label>
+<label><input type="checkbox" id="cMay" checked> A-Z</label>
+<label><input type="checkbox" id="cNum" checked> 0-9</label>
+<label><input type="checkbox" id="cSim" checked> Símbolos</label>
+</div>
+<div class="row" id="opsFrase" hidden>
+<label>Palabras: <b id="nwV">5</b> <input type="range" id="nw" min="4" max="8" value="5"></label>
+</div>
+<button id="gen">Generar nueva</button>
+<div class="meter"><i id="gBar"></i></div>
+<div class="mu" id="gInfo"></div>
+</section>
+
+<section class="card">
+<h2>Verificador</h2>
+<input type="text" id="entrada" placeholder="Escribe una contraseña para evaluarla" autocomplete="off" spellcheck="false" style="width:100%">
+<div class="meter"><i id="vBar"></i></div>
+<div><span class="lbl" id="vLbl">—</span> <span class="mu" id="vBits"></span></div>
+<ul id="checks"></ul>
+</section>
+
+<section class="card">
+<h2>Convierte una palabra en contraseña segura</h2>
+<div class="out"><input type="text" id="palabra" placeholder="Escribe una palabra (ej. gato)" maxlength="20" autocomplete="off" spellcheck="false"><button id="conv">Convertir</button></div>
+<ul id="recs"></ul>
+<div id="vars"></div>
+</section>
+</main>
+<script src="script.js"></script></body></html>
